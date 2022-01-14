@@ -39,13 +39,13 @@ class BookController extends Controller
     {
         request()->validate([
             'name' => 'required',
-            'detail' => 'required',
+            //'detail' => 'required',
         ]);
 
         Book::create($request->all());
 
         return redirect()->route('books.index')
-                        ->with('success','Book created successfully.');
+                        ->with('success','Task created successfully.');
     }
 /**
      * Display the specified resource.
@@ -99,7 +99,7 @@ class BookController extends Controller
         $book->delete();
 
         return redirect()->route('books.index')
-                        ->with('success','Book deleted successfully');
+                        ->with('success','Task deleted successfully');
     }
 }
 

@@ -10,13 +10,14 @@
 
                 <div class="panel-body">
                     <!-- New Task Form -->
-		    <form action="{{ route('books.store') }}"  method="POST">
-                        @csrf
+                    <form action="{{ route('books.create') }}"  class="form-horizontal">
+
                         <!-- Task Name -->
                         <div class="form-group">
+                            <label for="task-name" class="col-sm-3 control-label">Task</label>
 
                             <div class="col-sm-6">
-                                <input type="text" name="name" class="form-control" placeholder="Task details" value="">
+                                <input type="text" name="name" id="task-name" class="form-control" value="">
                             </div>
                         </div>
 
@@ -34,9 +35,12 @@
 <!--
     <div class="row">
         <div class="col-lg-12 margin-tb">
+            <!--
             <div class="pull-left">
                 <h2>Task Manager by Nutanix Calm</h2>
             </div>
+            -->
+<!--
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('books.create') }}">+Add Task</a>
             </div>

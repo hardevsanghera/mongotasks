@@ -1,4 +1,4 @@
-extends('books.layout')
+@extends('books.layout')
 
 @section('content')
     <div class="row">
